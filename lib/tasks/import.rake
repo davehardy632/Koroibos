@@ -6,7 +6,7 @@ namespace :import do
     CSV.foreach('./data/olympic_data.csv', headers: true) do |row|
       row_data = row.to_h
 
-      olympian = Olympian.find_or_create_by(name: row_data["Name"], sex: row_data["Sex"], age: row_data["Age"], height: row_data["Height"], weight: row_data["Weight"], team: row_data["Team"], sport: row_data["sport"])
+      olympian = Olympian.find_or_create_by(name: row_data["Name"], sex: row_data["Sex"], age: row_data["Age"], height: row_data["Height"], weight: row_data["Weight"], team: row_data["Team"], sport: row_data["Sport"])
 
       if row_data["Medal"] != "NA"
         olympian.update_column(:total_medals_won, olympian.total_medals_won += 1)
