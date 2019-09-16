@@ -13,6 +13,6 @@ describe Olympian do
 
   describe "Relationships" do
     it {should have_many :olympian_events}
-    it {should have_many :events, through: :olympian_events}
+    it {should have_many(:events).through(:olympian_events)}
   end
 end
