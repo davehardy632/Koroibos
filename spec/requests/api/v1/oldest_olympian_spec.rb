@@ -20,10 +20,10 @@ describe "Oldest Olympian" do
     expect(response).to be_successful
 
     oldest_olympian = JSON.parse(response.body)
-binding.pry
+
     expected_keys = ["name", "team", "age", "sport", "total_medals_won"]
 
     expect(oldest_olympian["oldest"].first.keys).to eq(expected_keys)
-    expect(oldest_olympian["oldest"].first["age"]).to eq(28)
+    expect(oldest_olympian["oldest"].first["age"]).to eq(30)
   end
 end
