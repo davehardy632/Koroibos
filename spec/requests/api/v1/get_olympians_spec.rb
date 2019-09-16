@@ -20,7 +20,10 @@ describe "Get all Olympians, name, team, age, sport, total medals won" do
     expect(response).to be_successful
 
     olympians = JSON.parse(response.body)
-binding.pry
-    expect(olympians.count).to eq(2856)
+    expected_keys = ["name", "team", "age", "sport", "total_medals_won"]
+
+    expect(olympians["olympians"].count).to eq(10)
+    expect(olympians["olympians"].first.keys).to eq(expected_keys)
+    expect(olympians["olympians"].last.keys).to eq(expected_keys)
   end
 end
