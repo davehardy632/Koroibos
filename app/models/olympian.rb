@@ -10,5 +10,7 @@ class Olympian < ApplicationRecord
   validates_presence_of :team
   validates_presence_of :total_medals_won
 
-
+  def self.return_olympians
+    binding.pry
+  end
 end
