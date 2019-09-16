@@ -7,7 +7,7 @@ describe Event do
 
   describe "Relationships" do
     it {should have_many :olympian_events}
-    it {should have_many :olympians, through: :olympian_events}
+    it {should have_many(:olympians).through(:olympian_events)}
     it {should belong_to :sport}
   end
 end
