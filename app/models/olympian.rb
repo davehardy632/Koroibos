@@ -17,4 +17,8 @@ class Olympian < ApplicationRecord
   def self.youngest
     self.select("olympians.name as name, olympians.team as team, olympians.age as Age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("age").first
   end
+
+  def self.oldest
+    self.select("olympians.name as name, olympians.team as team, olympians.age as Age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("age desc").first
+  end
 end

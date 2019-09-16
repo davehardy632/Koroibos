@@ -31,4 +31,19 @@ class OlympiansFacade
     response_obj
   end
 
+  def self.oldest_olympian
+    response_obj = {}
+    response_obj["oldest"] = []
+    olympian = Olympian.oldest
+    olympian_hash = {}
+    olympian_hash["name"] = olympian.name
+    olympian_hash["team"] = olympian.team
+    olympian_hash["age"] = olympian.age
+    olympian_hash["sport"] = olympian.sport
+    olympian_hash["total_medals_won"] = olympian.total_medals_won
+    olympian_hash
+    response_obj["oldest"] << olympian_hash
+    response_obj
+  end
+
 end
