@@ -3,7 +3,7 @@ class EventsFacade
   def self.return_events
     response_obj = {}
     response_obj["events"] = []
-    all_sports = Sport.all
+    all_sports = Sport.all_alphabetically
     all_sports.each do |sport|
       sport_obj = {}
       sport_obj["sport"] = sport.sport

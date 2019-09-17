@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_09_16_183638) do
   create_table "olympian_events", force: :cascade do |t|
     t.bigint "olympian_id"
     t.bigint "event_id"
-    t.string "medal"
+    t.integer "medal"
     t.string "games"
     t.index ["event_id"], name: "index_olympian_events_on_event_id"
     t.index ["olympian_id"], name: "index_olympian_events_on_olympian_id"
