@@ -23,12 +23,12 @@ describe "Return the medalists for an event" do
 
     expect(medalists["medalists"].count).to eq(3)
     expect(medalists["medalists"][0].keys).to eq(["name", "team", "age", "medal"])
-    expect(medalists["medalists"][0].values).to eq(["James Adede", "United States", 24, "Gold"])
+    expect(medalists["medalists"][0].values).to eq(["Macarena Aguilar Daz", "China", 22, "Gold"])
 
     expect(medalists["medalists"][1].keys).to eq(["name", "team", "age", "medal"])
     expect(medalists["medalists"][1].values).to eq(["Evelina Afoa", "Egypt", 27, "Silver"])
 
     expect(medalists["medalists"][2].keys).to eq(["name", "team", "age", "medal"])
-    expect(medalists["medalists"][2].values).to eq(["Macarena Aguilar Daz", "China", 22, "Bronze"])
+    expect(medalists["medalists"][2].values).to eq(["James Adede", "United States", 24, "Bronze"])
   end
 end
