@@ -20,7 +20,8 @@ describe "Return relevant olympic stats" do
     expect(response).to be_successful
 
     stats_obj = JSON.parse(response.body)
-    binding.pry
-    expect(stats_obj.keys).to eq(["pie"])
+
+    expect(stats_obj["olympian_stats"].keys).to eq(["total_competing_olympians", "average_weight", "average_age"])
+    expect(stats_obj["olympian_stats"]["average_weight"].keys).to eq(["unit", "male_olympians", "female_olympians"])
   end
 end
