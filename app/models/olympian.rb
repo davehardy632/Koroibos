@@ -21,4 +21,16 @@ class Olympian < ApplicationRecord
   def self.oldest
     self.select("olympians.name as name, olympians.team as team, olympians.age as Age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("age desc").first
   end
+
+  def self.average_male_weight
+    self.where(sex: "M").average(:weight).to_f.round(1)
+  end
+
+  def self.average_female_weight
+    self.where(sex: "F").average(:weight).to_f.round(1)
+  end
+
+  def self.average_age
+    self.average(:age).to_f.round(1)
+  end
 end
