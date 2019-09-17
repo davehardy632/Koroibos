@@ -11,7 +11,8 @@ class Olympian < ApplicationRecord
   validates_presence_of :total_medals_won
 
   def self.return_olympians
-    self.select("olympians.name as name, olympians.team as team, olympians.age as Age, olympians.sport as sport, olympians.total_medals_won as total_medals_won")
+    self.select("olympians.name as name, olympians.team as team, olympians.age as Age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("name")
+    binding.pry
   end
 
   def self.youngest
