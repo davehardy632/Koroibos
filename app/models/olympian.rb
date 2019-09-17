@@ -12,7 +12,6 @@ class Olympian < ApplicationRecord
 
   def self.return_olympians
     self.select("olympians.name as name, olympians.team as team, olympians.age as Age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("name")
-    binding.pry
   end
 
   def self.youngest
