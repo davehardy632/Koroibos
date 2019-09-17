@@ -11,15 +11,15 @@ class Olympian < ApplicationRecord
   validates_presence_of :total_medals_won
 
   def self.return_olympians
-    self.select("olympians.name as name, olympians.team as team, olympians.age as Age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("name")
+    self.select("olympians.name as name, olympians.team as team, olympians.age as age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("olympians.name")
   end
 
   def self.youngest
-    self.select("olympians.name as name, olympians.team as team, olympians.age as Age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("age").first
+    self.select("olympians.name as name, olympians.team as team, olympians.age as age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("age").first
   end
 
   def self.oldest
-    self.select("olympians.name as name, olympians.team as team, olympians.age as Age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("age desc").first
+    self.select("olympians.name as name, olympians.team as team, olympians.age as age, olympians.sport as sport, olympians.total_medals_won as total_medals_won").order("age desc").first
   end
 
   def self.average_male_weight
