@@ -33,4 +33,8 @@ class Olympian < ApplicationRecord
   def self.average_age
     self.average(:age).to_f.round(1)
   end
+
+  def self.sport_competitors(sport_name)
+    self.where(sport: sport_name).order(name: :asc)
+  end
 end
