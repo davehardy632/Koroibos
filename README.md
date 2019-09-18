@@ -7,6 +7,8 @@
 
 <p>David Hardy https://github.com/davehardy632</p>
 
+<p>The production application is hosted on heroku with the url: https://stormy-coast-68922.herokuapp.com</p>
+
 <h4>Ruby Version</h4>
 
 <p>This application was built in Rails 5.2.3</p>
