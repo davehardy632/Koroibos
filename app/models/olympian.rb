@@ -48,4 +48,8 @@ class Olympian < ApplicationRecord
       true
     end
   end
+
+  def self.top_ten_by_medals
+    self.order(total_medals_won: :desc).limit(10)
+  end
 end
