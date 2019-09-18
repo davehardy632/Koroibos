@@ -3,6 +3,10 @@
 <p>Koroibos is Rails Api that serves endpoints related to the data found in a csv file with information about the 2</p>
 016 Olympic Games. It is the final project in the Turing School backend curriculum.</p>
 
+<h4>Core Contributors</h4>
+
+<p>David Hardy https://github.com/davehardy632</p>
+
 <h4>Ruby Version</h4>
 
 <p>This application was built in Rails 5.2.3</p>
@@ -236,8 +240,4 @@ _This is sample data and it is incomplete. You may not have all medalists for a 
 <img width="872" alt="Screen Shot 2019-09-18 at 9 49 07 AM" src="https://user-images.githubusercontent.com/42919604/65164258-14916580-da2c-11e9-943b-ed4b8e03a4ad.png">
 
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
