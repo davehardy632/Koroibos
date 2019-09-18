@@ -31,4 +31,11 @@ describe "Return the medalists for an event" do
     expect(medalists["medalists"][2].keys).to eq(["name", "team", "age", "medal"])
     expect(medalists["medalists"][2].values).to eq(["James Adede", "United States", 24, "Bronze"])
   end
+
+  it "Sad path, when an invalid event id is sent an error is thrown" do
+
+    get "/api/v1/events/5000/medalists"
+
+    expect(response.body).to eq("{\"error\":\"Event not Found\",\"status\":404}")
+  end
 end

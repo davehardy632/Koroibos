@@ -56,6 +56,12 @@ describe "With any specified country return the total medal count" do
     expect(medal_info["country"]).to eq("United States")
     expect(medal_info["medals"]).to eq({"gold"=>2, "silver"=>3, "bronze"=>5})
     expect(medal_info["total_medal_count"]).to eq(10)
+  end
 
+  it "Sad Path, if an invalid query is sent, an error is thrown" do
+
+    get '/api/v1/medal_count'
+
+    expect(response.body).to eq("{\"error\":\"Missing parameters\",\"status\":400}")
   end
 end

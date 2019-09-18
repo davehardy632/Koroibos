@@ -15,12 +15,12 @@ describe "Youngest olympian endpoint" do
   end
   it "Will return info about the youngest olympian" do
 
-    get '/api/v1/olympians?age=youngest'
+    get '/api/v1/olympian?age=youngest'
 
     expect(response).to be_successful
 
     youngest_olympian = JSON.parse(response.body)
-    
+
     expected_keys = ["name", "team", "age", "sport", "total_medals_won"]
 
     expect(youngest_olympian["youngest"].first.keys).to eq(expected_keys)
