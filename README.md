@@ -233,6 +233,7 @@ _This is sample data and it is incomplete. You may not have all medalists for a 
 
 <h4>Database Schema</h4>
 
+<img width="872" alt="Screen Shot 2019-09-18 at 9 49 07 AM" src="https://user-images.githubusercontent.com/42919604/65164258-14916580-da2c-11e9-943b-ed4b8e03a4ad.png">
 
 
 * Services (job queues, cache servers, search engines, etc.)
