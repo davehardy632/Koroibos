@@ -19,4 +19,14 @@ describe "Returns a list of competitors for each sport" do
     # competitors are returned alphabetically
     expect(competitors.values).to eq(["Badminton", ["Bill Johnson", "Jim Smith", "Kathy Bates"]])
   end
+
+  it "When an invalid sport id is sent, an error message is returned" do
+
+    get '/api/v1/sports/300/competitors'
+
+
+    binding.pry
+    expect(response.status).to eq(404)
+    expect(response.body).to eq("{\"error\":\"Sport id is invalid\",\"status\":404}")
+  end
 end
