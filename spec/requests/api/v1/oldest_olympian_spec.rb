@@ -15,7 +15,7 @@ describe "Oldest Olympian" do
   end
   it "Returns info on the oldest olympian in the dataset" do
 
-    get '/api/v1/olympians?age=oldest'
+    get '/api/v1/olympian?age=oldest'
 
     expect(response).to be_successful
 

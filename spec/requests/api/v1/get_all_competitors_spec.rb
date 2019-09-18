@@ -24,9 +24,6 @@ describe "Returns a list of competitors for each sport" do
 
     get '/api/v1/sports/300/competitors'
 
-
-    binding.pry
-    expect(response.status).to eq(404)
-    expect(response.body).to eq("{\"error\":\"Sport id is invalid\",\"status\":404}")
+    expect(response.body).to eq("{\"error\":\"Sport not Found\",\"status\":404}")
   end
 end

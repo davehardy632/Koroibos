@@ -26,4 +26,11 @@ describe "Get all Olympians, name, team, age, sport, total medals won" do
     expect(olympians["olympians"].first.keys).to eq(expected_keys)
     expect(olympians["olympians"].last.keys).to eq(expected_keys)
   end
+
+  it "Sad Path: if a param is sent without youngest or oldest, an error is thrown" do
+
+    get '/api/v1/olympian?age=sss'
+
+    expect(response.body).to eq("{\"error\":\"Invalid paramters\",\"status\":400}")
+  end
 end
