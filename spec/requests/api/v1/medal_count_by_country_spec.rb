@@ -64,4 +64,11 @@ describe "With any specified country return the total medal count" do
 
     expect(response.body).to eq("{\"error\":\"Missing parameters\",\"status\":400}")
   end
+
+  it "Sad Path, if an invalid country is sent, an error is thrown" do
+
+    get '/api/v1/medal_count?country=not a country'
+
+    expect(response.body).to eq("{\"error\":\"Country not Found\",\"status\":404}")
+  end
 end

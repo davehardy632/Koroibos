@@ -5,7 +5,7 @@ class Api::V1::MedalCountController < ApplicationController
       render json: medal_count_facade.return_medal_data
     elsif !params.include?("country")
       render json: missing_parameter_error
-    else
+    elsif !valid_country?
       render json: error_message_response
     end
   end
