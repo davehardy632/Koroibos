@@ -37,4 +37,15 @@ class Olympian < ApplicationRecord
   def self.sport_competitors(sport_name)
     self.where(sport: sport_name).order(name: :asc)
   end
+
+  def self.total_medals(country)
+    self.where(team: country).sum(:total_medals_won)
+  end
+
+  def self.match_countries(id, country)
+    olympian = self.find(id)
+    if olympian.team == country
+      true
+    end
+  end
 end
